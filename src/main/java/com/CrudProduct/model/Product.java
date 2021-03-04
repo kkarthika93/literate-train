@@ -17,6 +17,9 @@ public class Product {
 	@Column(name = "product_Price")
 	private int productPrice;
 
+	public Product() {
+	}
+
 	public Product(int productId, String productName, int productPrice) {
 		this.productId = productId;
 		this.productName = productName;

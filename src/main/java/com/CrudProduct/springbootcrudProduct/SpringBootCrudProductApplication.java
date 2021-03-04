@@ -12,7 +12,5 @@ public class SpringBootCrudProductApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootCrudProductApplication.class, args);
-		System.out.println("hi");
 	}
-
 }
