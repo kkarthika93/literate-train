@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
 
 @Entity
 @Table(name = "product")
@@ -11,6 +12,7 @@ public class Product {
 	@Id
 	private int productId;
 
+	@NotEmpty(message = "Product name is required")
 	@Column(name = "product_Name")
 	private String productName;
 

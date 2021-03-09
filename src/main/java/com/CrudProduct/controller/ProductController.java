@@ -1,6 +1,7 @@
 package com.CrudProduct.controller;
 
 import java.util.List;
+import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,7 +46,7 @@ public class ProductController {
 	}
 
 	@PostMapping
-	public ResponseEntity<Product> createOrUpdateProduct(@RequestBody Product product) throws RecordNotFoundException {
+	public ResponseEntity<Product> createOrUpdateProduct(@Valid @RequestBody Product product) throws RecordNotFoundException {
 		Long startTime = System.currentTimeMillis();
 		logger.debug("createOrUpdateProduct started at {} ms", startTime);
 		Product updated = productService.createOrUpdateProduct(product);
